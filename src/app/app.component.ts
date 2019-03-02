@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Library';
+  book: any;
+
+  constructor() {
+    setTimeout(() => {
+      this.book = {
+        title: 'Angular 8',
+        pages: 300,
+        year: 2019,
+        author: 'Hevery'
+      };
+    }, 500);
+
+  }
 }
