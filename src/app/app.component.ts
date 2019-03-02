@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Book} from './book';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,7 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  book: any;
+  book: Book;
 
   constructor() {
     setTimeout(() => {
