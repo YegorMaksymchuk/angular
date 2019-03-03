@@ -2,7 +2,7 @@
 <div>Please, specify number of books:
   <input type="text" [(ngModel)]="booksNumber"/></div>
 <div>
-  <div *ngFor="let book of books | slice : 0 : booksNumber"
+  <div *ngFor="let book of books$ | async | slice : 0 : booksNumber"
        [ngClass]="{ javascript : isJavaScript(book)}">
     <app-book-details [book]="book"></app-book-details>
   </div>
