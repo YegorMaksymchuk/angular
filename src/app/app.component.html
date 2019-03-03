@@ -8,7 +8,7 @@
     <div>Author: {{book.author}}</div>
     <div>Year: {{formatYear(book.year)}}</div>
     <div>Pages: {{book.pages}}</div>
-    <div>Description: {{book.description}}    </div>
+    <div appFontStyle [fontWeight]="'600'">Description: {{book.description}}    </div>
     <div>Price: {{book.price | currency: 'UAH'}}</div>
   </div>
   <div>
