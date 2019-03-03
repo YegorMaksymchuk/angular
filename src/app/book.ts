@@ -8,4 +8,6 @@ export class Book {
   author: string;
 
   description: string;
+
+  price: number;
 }

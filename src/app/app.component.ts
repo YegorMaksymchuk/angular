@@ -9,6 +9,7 @@ import {BookService} from './book.service';
 })
 export class AppComponent {
   books: Book[];
+  booksNumber: number;
 
   constructor(private bookService: BookService) {
     this.books = bookService.getBooks();
@@ -16,5 +17,9 @@ export class AppComponent {
 
   isJavaScript(book: Book): boolean {
     return book.title.indexOf('JavaScript') >= 0;
+  }
+
+  formatYear(year: number): string {
+    return year + ' year';
   }
 }
