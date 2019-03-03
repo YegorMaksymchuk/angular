@@ -6,13 +6,15 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {QuotePipe} from './quote.pipe';
 import {BookRegistrationComponent} from './book-registration/book-registration.component';
 import {FontStyleDirective} from './font-style.directive';
+import {BookDetailsComponent} from './book-details/book-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotePipe,
     BookRegistrationComponent,
-    FontStyleDirective
+    FontStyleDirective,
+    BookDetailsComponent
   ],
   imports: [
     BrowserModule,

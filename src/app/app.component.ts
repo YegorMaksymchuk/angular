@@ -18,8 +18,4 @@ export class AppComponent {
   isJavaScript(book: Book): boolean {
     return book.title.indexOf('JavaScript') >= 0;
   }
-
-  formatYear(year: number): string {
-    return year + ' year';
-  }
 }
