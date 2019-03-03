@@ -1,4 +1,17 @@
-<div>Book title: {{book?.title}}</div>
-<div>Book pages: {{book?.pages}}</div>
-<div>Book year: {{book?.year}}</div>
-<div>Book author: {{book?.author}}</div>
+<div>
+  <div *ngFor="let book of books"
+       [ngClass]="{ javascript : isJavaScript(book)}">
+    <h4>{{book.title}}</h4>
+    <div>Author: {{book.author}}</div>
+    <div>Year: {{book.year}}</div>
+    <div>Pages: {{book.pages}}</div>
+    <div>Description: {{book.description}}
+    </div>
+  </div>
+  <div>
+    Please, enter your option:
+    <input type="text">
+    <button type="button"> Submit</button>
+  </div>
+  <div>You chosen ...</div>
+</div>
