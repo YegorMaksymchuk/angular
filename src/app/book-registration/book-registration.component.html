@@ -2,8 +2,7 @@
   <div>
     <label>Title</label><input formControlName="title">
   </div>
-  <div *ngIf="bookForm.get('title').touched && !bookForm.get('title').valid"
-       [style.color]="'red'">
+  <div *ngIf="isValid('title')" [style.color]="'red'">
     Please, enter valid title
   </div>
   <div>
@@ -17,6 +16,9 @@
   </div>
   <div>
     <label>Price</label><input formControlName="price">
+  </div>
+  <div>
+    <label>Description</label><input formControlName="description">
   </div>
   <button type="submit" [disabled]="!bookForm.valid">Save</button>
 </form>
