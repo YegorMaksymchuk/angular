@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Book} from '../book';
+import {BookService} from '../book.service';
 
 @Component({
   selector: 'app-book-registration',
@@ -8,13 +9,13 @@ import {Book} from '../book';
 })
 export class BookRegistrationComponent implements OnInit {
 
-  constructor() {
+  constructor(private bookService: BookService) {
   }
 
   ngOnInit() {
   }
 
   saveBook(book: Book): void {
-
+    this.bookService.save(book);
   }
 }
