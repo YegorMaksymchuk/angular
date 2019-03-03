@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {QuotePipe} from './quote.pipe';
 import {BookRegistrationComponent} from './book-registration/book-registration.component';
 
@@ -14,7 +14,8 @@ import {BookRegistrationComponent} from './book-registration/book-registration.c
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
