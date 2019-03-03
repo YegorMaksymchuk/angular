@@ -1,0 +1,26 @@
+<form (ngSubmit)="saveBook(bookForm.value)" #bookForm="ngForm">
+  <div>
+    <label>Title</label><input name="title" #title="ngModel"
+                               ngModel required>
+  </div>
+  <div *ngIf="title.touched && !title.valid" [style.color]="'red'">
+    Please, enter valid title
+  </div>
+  <div>
+    <label>Author</label><input name="author" #author="ngModel"
+                                ngModel required>
+  </div>
+  <div>
+    <label>Year</label><input name="year" #year="ngModel"
+                              ngModel required>
+  </div>
+  <div>
+    <label>Pages</label><input name="pages" #pages="ngModel"
+                               ngModel required>
+  </div>
+  <div>
+    <label>Price</label><input name="price" #price="ngModel"
+                               ngModel required>
+  </div>
+  <button type="submit" [disabled]="!bookForm.valid">Save</button>
+</form>
